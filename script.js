@@ -69,33 +69,6 @@ downloadBtn.addEventListener('click', (e) => {
     window.location.href = 'https://drive.google.com/file/d/1hWwemnD-N5wRHGce9ZHG9j1mRMy3eXwd/view?usp=sharing'; // Substitua por seu link do CV
 });
 
-// Contact form validation
-document.getElementById('form-contato').addEventListener('submit', function(e) {
-    const form = this;
-    const campos = form.querySelectorAll('input, textarea');
-    let preenchido = true;
-  
-    campos.forEach(campo => {
-      if (!campo.value.trim()) {
-        preenchido = false;
-      }
-    });
-  
-    if (!preenchido) {
-      e.preventDefault(); 
-      alert('Por favor, preencha todos os campos antes de enviar.');
-    } else {
-     // Mostra mensagem de sucesso (apenas visual, pois formspree cuida do envio real)
-      const mensagem = document.getElementById('mensagem-sucesso');
-      mensagem.style.display = 'block';
-  
-      // Esconde a mensagem após 3 segundos
-      setTimeout(() => {
-        mensagem.style.display = 'none';
-      }, 3000);
-    }
-  });
-  
 
 // Animação para as boxes de serviços e portfolio
 document.querySelectorAll('.services-box').forEach((box) => {

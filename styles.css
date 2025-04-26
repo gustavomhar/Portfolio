@@ -48,7 +48,8 @@ header {
 }
 
 .logo{
-    font-size: 1.7rem;
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
@@ -75,20 +76,30 @@ span{
     color: var(--main-color);
 }
 
-.home, .about {
-    display: flex;
+.home {
+    
+    margin-top: 90px;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.about {
+  display: flex;
+ 
+}
+.about h3{
+    font-size: 5.0rem;
+    font-weight: 700;
+}
+.about-content{
+    font-size: 1.6rem;
 }
 
 .home-img {
     border-right: solid 0.6rem;
     border-bottom: solid 0.6rem; 
     border-image: linear-gradient(135deg,transparent 50%, #00eeff  ) 1;
-}
-.home p{
-    font-size: 19px;
 }
 
 .about-img {
@@ -101,19 +112,20 @@ home-img img, about-img img{
     width: 100%;
 }
 
-.home-content, .about-content{
+.home-content {
     width: 45%;
 }
 
-.home-content h3, .about-content h3{
+.home-content h3{
     
     font-weight: 700;
     font-size: 2.5rem;
 }
 
-.home-content h1, .about-content h1{
+.home-content h1{
     
     font-weight: 700;
+    font-size: 6.0rem;
     line-height: 1.3;
 }
 
@@ -141,10 +153,9 @@ home-img img, about-img img{
     transform: scale(1.10);
   }
 
-.services h2,
-.portfolio h2,
-.contact h2 {
-    font-size: 2.2rem;
+.skills h2,
+.projects h2 {
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }  
@@ -152,43 +163,48 @@ home-img img, about-img img{
     color: var(--bg-color-01);
 }
 
-.services-container{
-    display: fles;
-    flex-direction: row;
-    justify-content: space-evenly;
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px; 
+    justify-items: center;
+    
 }
 
 
-.services-box{
-    display: flex;
+.skills-box{
+     display: flex;
+     background-color: var(--color-00);
+     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 25rem;
-    margin-bottom: 1rem ;
+    justify-content: center;
+    min-height: 20rem;
+    min-width:27rem;
+    margin-bottom: 1rem;
+    
 }
 
-.services-container .services-box {
+.skills-container .skills-box {
     padding: 2rem 1rem 2.5rem;
-    border-radius: 1.2rem;
+    border-radius: 1.0rem;
     text-align: center;
     border: solid 0.15rem var(--bg-color-01);
-    background-color: var(--bg-color-01);
     transition: 0.5s ease;
 }
-.services-container .services-box:hover {
-    border-color: var(--main-color);
+.skills-container .skills-box:hover {
     transform: scale(1.01);
 }
 
-.services-box i{
-    font-size: 4.3rem;
+.skills-box i{
+    font-size: 3.0rem;
     color: var(--main-color);
 }
-.services-box h3{
+.skills-box h3{
 
     font-size: 1.5rem;
 }
-.services-box p{
+.skills-box p{
     margin: 0.5rem;
     letter-spacing: 0.1rem;
     display: -webkit-box;
@@ -216,30 +232,30 @@ home-img img, about-img img{
     cursor: pointer ;
 }
 /* /BUTTON */
-.portfolio{
+.projects{
     background-color: var(--bg-color-01);
 }
 
-.portfolio-container{
+.projects-container{
     display: grid;
     gap: 1.2rem;
 }
 
-.portfolio-box{
+.projects-box{
     position: relative;
     border-radius: 0.6rem;
     box-shadow: 0 0 0.6rem var(--bg-color-01);
     overflow: hidden;
     display: flex;
 }
-.portfolio-box img{
+.projects-box img{
     width: 100%;
     transition: 0.5s ease;
 }
-.portfolio-box img:hover{
+.projects-box img:hover{
     transform: scale(1.1);
 }
-.portfolio-box .portfolio-layer{
+.projects-box .projects-layer{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -255,18 +271,18 @@ home-img img, about-img img{
     transform: translateY(50rem);
     transition: 0.5s ease;
 }
-.portfolio-box:hover .portfolio-layer{
+.projects-box:hover .projects-layer{
     transform: translateY(0)
 }
 
-.portfolio-layer h4{
+.projects-layer h4{
     font-size: 1.8rem;
 }
 
-.portfolio-layer p{
+.projects-layer p{
     margin: 0.2rem 0 0.5rem;
 }
-.portfolio-layer a{
+.projects-layer a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -275,7 +291,7 @@ home-img img, about-img img{
     background: var(--text-color);
     border-radius: 50%;
 }
-.portfolio-layer a i{
+.projects-layer a i{
     font-size: 1.2rem;
     color: var(--bg-color-01);
 }
@@ -333,3 +349,19 @@ textarea {
         width: 100%; /* Faz o botão ocupar toda a largura em telas pequenas */
     }
 }
+footer{
+    text-align: center;
+    color: white;
+    background-color: var(--bg-color-01);
+    font-size: 23px;
+    padding: 20px; 
+}
+/* BARRA DE ROLAGEM */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+  }
